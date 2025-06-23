@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useNotification } from '../services/NotificationContext.jsx'
+import { useNotification } from '../context/NotificationContext.jsx'
 
 export default function Home() {
   const navigate = useNavigate()

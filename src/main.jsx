@@ -6,7 +6,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
-import { NotificationProvider } from './services/NotificationContext.jsx'
+import { NotificationProvider } from './context/NotificationContext.jsx'
 import './index.css'; 
 
 if ('serviceWorker' in navigator) {

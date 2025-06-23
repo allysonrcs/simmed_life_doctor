@@ -4,8 +4,9 @@ import { getMessaging, onMessage } from 'firebase/messaging'
 import PrivateRoute from './components/PrivateRoute'
 import Home from './pages/Home'
 import Login from './pages/Login'
-import Consultorio from './pages/Consultorio' 
-import { useNotification } from './services/NotificationContext'
+import Consultorio from './pages/Consultorio'
+import Layout from './layout/Layout'
+import { useNotification } from './context/NotificationContext'
 import './app.css'; 
 
 function App() {
@@ -36,22 +37,24 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Login />} />
-      <Route
-        path="/consulta/:meetingId/:userId"
-        element={
-          <PrivateRoute>
-            <Consultorio />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/home"
-        element={
-          <PrivateRoute>
-            <Home />
-          </PrivateRoute>
-        }
-      />
+      <Route element={<Layout />}>
+        <Route
+          path="/consulta/:meetingId/:userId"
+          element={
+            <PrivateRoute>
+              <Consultorio />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/home"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
+      </Route>
     </Routes>
   )
 }
