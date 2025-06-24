@@ -22,13 +22,9 @@ export default function Home() {
             🔔 Nova Reunião!
           </button>
         )}
+ 
       </div>
-      <button onClick={() => {
-        localStorage.removeItem('auth')
-        navigate('/')
-      }}>
-        Sair
-      </button>
+ 
     </div>
   )
 }

@@ -102,6 +102,16 @@ export default function Login() {
           </button>
         </div>
 
+ 
+        <button
+          onClick={handleLogin}
+          disabled={loadingToken}
+          className={`button ${loadingToken ? 'disabled' : ''}`}
+          type="button"
+        >
+          {loadingToken ? 'Carregando...' : 'Entrar'}
+        </button>
+ 
         <button
           onClick={handleLogin}
           disabled={!fcmToken && !loadingToken}
@@ -110,6 +120,7 @@ export default function Login() {
         >
           {loadingToken ? 'Carregando...' : 'Entrar'}
         </button>
+ 
 
         <div className="links">
           <a href="#!" className="link">Esqueci a senha</a>

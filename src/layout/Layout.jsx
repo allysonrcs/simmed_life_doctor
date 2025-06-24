@@ -4,9 +4,11 @@ import Menu from './Menu';
 
 export default function Layout() {
   return (
-    <div>
+ 
+    <div style={{ display: 'flex' }}>
       <Menu />
-      <div style={{ padding: '1rem' }}>
+      <div style={{ flex: 1, padding: '1rem' }}>
+ 
         <Outlet />
       </div>
     </div>
