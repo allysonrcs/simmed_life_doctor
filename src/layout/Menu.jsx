@@ -3,11 +3,12 @@ import { Link, useNavigate } from 'react-router-dom';
 
 export default function Menu() {
   const navigate = useNavigate();
-
+ 
   const logout = () => {
     localStorage.removeItem('auth');
     navigate('/');
   };
+ 
 
   return (
     <div
@@ -28,5 +29,6 @@ export default function Menu() {
         </li>
       </ul>
     </div>
+
   );
 }
