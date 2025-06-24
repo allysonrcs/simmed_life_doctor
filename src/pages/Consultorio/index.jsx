@@ -2,10 +2,13 @@ import React from 'react'
 import { useEffect, useState } from 'react';
 import { MeetingProvider, lightTheme } from 'amazon-chime-sdk-component-library-react';
 import { ThemeProvider } from 'styled-components';
+ 
+ 
 import MeetingForm from '../../components/MeetingForm';
 import Meeting from '../../components/Meeting';
 import Spinner from '../../components/Spinner';
-import { useParams } from 'react-router-dom'
+ 
+ import { useParams } from 'react-router-dom'
 
 
 export default function Consultorio() {
