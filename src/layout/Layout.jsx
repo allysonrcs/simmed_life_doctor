@@ -7,6 +7,8 @@ export default function Layout() {
     <div style={{ display: 'flex' }}>
       <Menu />
       <div style={{ flex: 1, padding: '1rem' }}>
+ 
+
         <Outlet />
       </div>
     </div>

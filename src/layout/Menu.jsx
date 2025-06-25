@@ -9,6 +9,7 @@ export default function Menu() {
     navigate('/');
   };
 
+
   return (
     <div
       style={{
@@ -28,5 +29,6 @@ export default function Menu() {
         </li>
       </ul>
     </div>
+
   );
 }
