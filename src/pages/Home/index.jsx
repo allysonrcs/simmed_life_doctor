@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useNotification } from '../../context/NotificationContext.jsx'
 
+
 export default function Home() {
   const navigate = useNavigate()
   const { notificacao, setNotificacao } = useNotification()
@@ -22,9 +23,8 @@ export default function Home() {
             🔔 Nova Reunião!
           </button>
         )}
- 
       </div>
- 
+
     </div>
   )
 }
