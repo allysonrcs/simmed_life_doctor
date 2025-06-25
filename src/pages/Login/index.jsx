@@ -104,8 +104,8 @@ export default function Login() {
 
         <button
           onClick={handleLogin}
-          disabled={!fcmToken && !loadingToken}
-          className={`button ${(!fcmToken && !loadingToken) ? 'disabled' : ''}`}
+          disabled={loadingToken}
+          className={`button ${loadingToken ? 'disabled' : ''}`}
           type="button"
         >
           {loadingToken ? 'Carregando...' : 'Entrar'}
